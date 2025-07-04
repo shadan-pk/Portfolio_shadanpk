@@ -1,0 +1,240 @@
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient, linear-gradient(135deg, #4285F4, #1a73e8));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.card:hover::before {
+  opacity: 0.1;
+}
+
+.cardInner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconContainer {
+  position: relative;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 3.5rem;
+  color: #1a73e8;
+  position: relative;
+  z-index: 3;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease;
+}
+
+.card:hover .icon {
+  color: #4285F4;
+  filter: drop-shadow(0 6px 12px rgba(66, 133, 244, 0.3));
+}
+
+.iconGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(66, 133, 244, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.card:hover .iconGlow {
+  opacity: 1;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.1); }
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a73e8;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.card:hover .title {
+  color: #4285F4;
+  text-shadow: 0 0 10px rgba(66, 133, 244, 0.3);
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #5f6368;
+  line-height: 1.5;
+  margin: 0;
+  overflow: hidden;
+}
+
+.shimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.6s ease;
+  z-index: 1;
+}
+
+.card:hover .shimmer {
+  left: 100%;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(66, 133, 244, 0.6);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .particle {
+  opacity: 1;
+  animation: float 3s ease-in-out infinite;
+}
+
+.particle1 {
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+  background: #4285F4;
+}
+
+.particle2 {
+  top: 30%;
+  right: 20%;
+  animation-delay: 0.5s;
+  background: #34A853;
+}
+
+.particle3 {
+  bottom: 25%;
+  left: 25%;
+  animation-delay: 1s;
+  background: #FBBC05;
+}
+
+.particle4 {
+  bottom: 35%;
+  right: 15%;
+  animation-delay: 1.5s;
+  background: #EA4335;
+}
+
+.particle5 {
+  top: 50%;
+  left: 10%;
+  animation-delay: 2s;
+  background: #4285F4;
+}
+
+.particle6 {
+  top: 60%;
+  right: 10%;
+  animation-delay: 2.5s;
+  background: #34A853;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-10px) scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Enhanced hover effects */
+.card:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 0 0 1px rgba(66, 133, 244, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .icon {
+    font-size: 3rem;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+  }
+  
+  .iconGlow {
+    width: 60px;
+    height: 60px;
+  }
+}
+

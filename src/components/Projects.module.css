@@ -1,0 +1,439 @@
+.contentWrapper {
+  padding: 2rem;
+  max-width: 100%;
+  height: 100%;
+  color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroSection {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.mainTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  position: relative;
+}
+
+.mainTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #4285F4, #34A853, #FBBC05, #EA4335);
+  border-radius: 2px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #9aa0a6;
+  font-weight: 300;
+  margin: 0;
+}
+
+.projectsContainer {
+  width: 100%;
+  max-width: 1200px;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.filterSection {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.filterButton {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #9aa0a6;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.filterButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.filterButton.active {
+  background: #4285F4;
+  color: #ffffff;
+  border-color: #4285F4;
+}
+
+.projectsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.projectCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 120px;
+  margin:0 10px;
+}
+
+.projectCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.projectCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.projectCard:hover::before {
+  left: 100%;
+}
+
+.projectImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 2rem;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.projectImage::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+}
+
+.projectContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.projectTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.projectDescription {
+  color: #9aa0a6;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+}
+
+.projectTag {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+}
+
+.projectTag:hover {
+  background: #4285F4;
+  border-color: #4285F4;
+}
+
+.projectActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.projectLinks {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.projectLink {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.projectLink:hover {
+  background: #4285F4;
+  border-color: #4285F4;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.viewDetailsButton {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.viewDetailsButton:hover {
+  background: #34A853;
+  border-color: #34A853;
+  color: #ffffff;
+}
+
+/* Modal styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(25px);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modalTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #9aa0a6;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeButton:hover {
+  background: rgba(234, 67, 53, 0.2);
+  color: #EA4335;
+}
+
+.modalContent {
+  color: #9aa0a6;
+  line-height: 1.6;
+}
+
+.modalSection {
+  margin-bottom: 1.5rem;
+}
+
+.modalSectionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4285F4;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.modalSectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: #4285F4;
+  border-radius: 1px;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featureItem {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #9aa0a6;
+}
+
+.featureItem::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #34A853;
+  font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contentWrapper {
+    padding: 1rem;
+  }
+  
+  .mainTitle {
+    font-size: 2.5rem;
+  }
+  
+  .projectsContainer {
+    height: 70vh;
+  }
+  
+  .projectCard {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    min-height: auto;
+  }
+  
+  .projectImage {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .projectActions {
+    align-items: center;
+  }
+  
+  .filterSection {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .modal {
+    padding: 1.5rem;
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 2rem;
+  }
+  
+  .projectsContainer {
+    height: 60vh;
+  }
+  
+  .projectCard {
+    padding: 1rem;
+  }
+  
+  .projectImage {
+    width: 80px;
+    height: 80px;
+    font-size: 1.5rem;
+  }
+}
+

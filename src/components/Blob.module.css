@@ -1,0 +1,89 @@
+.blobContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.7;
+    filter: blur(40px);
+    animation: move 25s infinite alternate;
+  }
+  
+  .blue {
+    background: #4285F4;
+    width: 300px;
+    height: 300px;
+    top: 10vh;
+    left: 10vw;
+    animation-duration: 20s;
+  }
+  
+  .red {
+    background: #DB4437;
+    width: 250px;
+    height: 250px;
+    top: 50vh;
+    left: 70vw;
+    animation-duration: 22s;
+  }
+  
+  .yellow {
+    background: #F4B400;
+    width: 200px;
+    height: 200px;
+    top: 70vh;
+    left: 20vw;
+    animation-duration: 24s;
+  }
+  
+  .green {
+    background: #0F9D58;
+    width: 150px;
+    height: 150px;
+    top: 20vh;
+    left: 80vw;
+    animation-duration: 26s;
+  }
+
+  .purple {
+    background: #8A2BE2;
+    width: 220px;
+    height: 220px;
+    top: 40vh;
+    left: 40vw;
+    animation-duration: 28s;
+  }
+
+  .orange {
+    background: #FFA500;
+    width: 180px;
+    height: 180px;
+    top: 80vh;
+    left: 60vw;
+    animation-duration: 30s;
+  }
+
+  .pink {
+    background: #FFC0CB;
+    width: 130px;
+    height: 130px;
+    top: 5vh;
+    left: 50vw;
+    animation-duration: 32s;
+  }
+  
+  @keyframes move {
+    from {
+      transform: translate(0, 0) scale(1);
+    }
+    to {
+      transform: translate(calc(50vw - 50%), calc(50vh - 50%)) scale(1.5) rotate(0.5turn);
+    }
+  }

@@ -103,10 +103,11 @@ const HomePage = () => (
       </div>
       <div className="right-panel">
         <img 
-          src="./assets/profile.jpeg" 
+          src="/assets/profile.jpeg" 
           alt="Shadan PK" 
           className="profile-image"
         />
+
       </div>
     </div>
   </div>

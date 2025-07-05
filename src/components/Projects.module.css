@@ -429,10 +429,11 @@
 @media (max-width: 480px) {
   .mainTitle {
     font-size: 2rem;
+    margin-bottom: 1rem;
   }
   
   .projectsContainer {
-    height: 60vh;
+    height: 78vh;
   }
   
   .projectCard {
@@ -443,6 +444,10 @@
     width: 80px;
     height: 80px;
     font-size: 1.5rem;
+  }
+  .filterButton {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
   }
 }
 

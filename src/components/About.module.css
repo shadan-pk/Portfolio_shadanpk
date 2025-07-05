@@ -21,6 +21,7 @@
   margin-bottom: 0.5rem;
   color: #ffffff;
   position: relative;
+  margin-bottom: 34px;
 }
 
 .mainTitle::after {

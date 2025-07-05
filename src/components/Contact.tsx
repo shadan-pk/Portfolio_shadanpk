@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Contact.module.css';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter, FaPaperPlane } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaPaperPlane } from 'react-icons/fa';
 
 const ContactInfo = ({ icon: Icon, title, value, link }: { icon: any, title: string, value: string, link?: string }) => (
   <motion.div 
@@ -60,7 +60,7 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitStatus('idle');
     try {
-      const res = await fetch('/.netlify/functions/sendContactEmail', {
+      const res = await fetch('https://formspree.io/f/xyzjawdp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -135,11 +135,6 @@ const Contact = () => {
                 href="https://github.com/shadan-pk"
                 label="GitHub"
               />
-              {/* <SocialLink 
-                icon={FaTwitter}
-                href="https://twitter.com/shadan_pk"
-                label="Twitter"
-              /> */}
             </div>
           </div>
         </div>

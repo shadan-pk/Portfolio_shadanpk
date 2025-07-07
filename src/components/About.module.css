@@ -79,7 +79,7 @@
 
 .introText {
   font-size: 1rem;
-  color: #9aa0a6;
+  color: #f7f7f7;
   line-height: 1.6;
 }
 
@@ -156,7 +156,7 @@
 
 .skillTag {
   background: rgba(255, 255, 255, 0.1);
-  color: #9aa0a6;
+  color: #e4e6e9;
   padding: 0.2rem 0.5rem;
   border-radius: 8px;
   font-size: 0.7rem;
@@ -288,7 +288,7 @@
   }
   
   .timelineItem {
-    padding-left: 15px;
+    padding-left: 2px;
   }
   
   .timeline::before {
@@ -300,7 +300,10 @@
   }
   
   .timelineIcon {
-    left: -25px;
+    left: -43px;
+  }
+  .timeline{
+    left: 10px;
   }
 }
 

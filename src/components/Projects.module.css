@@ -427,17 +427,22 @@
 }
 
 @media (max-width: 480px) {
+  .contentWrapper {
+    /* padding: 0.5rem; */
+    margin-bottom: 50px;
+  }
   .mainTitle {
     font-size: 2rem;
     margin-bottom: 1rem;
   }
   
   .projectsContainer {
-    height: 78vh;
+    height: 60vh;
   }
   
   .projectCard {
     padding: 1rem;
+    margin: 10px;
   }
   
   .projectImage {
@@ -448,6 +453,9 @@
   .filterButton {
     font-size: 0.8rem;
     padding: 0.4rem 0.6rem;
+  }
+  .projectsGrid {
+    padding-right: 0rem;
   }
 }
 

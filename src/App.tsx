@@ -16,7 +16,7 @@ const HomePage = () => (
       <div className="left-panel">
         <h1 className="name">SHADAN PK</h1>
         <div className="experience-blocks">
-        <div style={{ display: 'flex', flexDirection: 'row', gap: '2rem', width: '100%', justifyContent: 'center', alignItems: 'stretch' }}>
+        <div className="experience-blocks-row">
           <HoverExplanationCard 
             icon={FaPaintBrush} 
             title="Designing" 
@@ -26,18 +26,6 @@ const HomePage = () => (
               overview: "I specialize in creating visually stunning and user-centric designs that balance aesthetics with functionality. My design philosophy centers on simplicity, accessibility, and meaningful user experiences.",
               skills: ["Visual Design", "Brand Identity", "Typography", "Color Theory", "Layout Design", "Design Systems"],
               tools: ["Adobe Photoshop", "Adobe Illustrator", "Figma", "Sketch", "Adobe XD", "Canva"],
-              // experience: [
-              //   "Designed brand identities for 20+ startups and small businesses",
-              //   "Created visual assets for IEEE MEA SB events and campaigns",
-              //   "Developed design systems used by teams of 10+ developers",
-              //   "Led design workshops for aspiring designers in the community"
-              // ],
-              // approach: [
-              //   "Research-driven design decisions based on user needs",
-              //   "Iterative design process with continuous feedback loops",
-              //   "Accessibility-first approach ensuring inclusive design",
-              //   "Collaboration with developers for seamless implementation"
-              // ]
             }}
           />
           <HoverExplanationCard 
@@ -49,18 +37,6 @@ const HomePage = () => (
               overview: "I focus on creating intuitive and engaging user experiences through research, prototyping, and user-centered design. My approach combines analytical thinking with creative problem-solving.",
               skills: ["User Research", "Wireframing", "Prototyping", "Usability Testing", "Information Architecture", "Interaction Design"],
               tools: ["Figma", "Adobe XD", "Principle", "InVision", "Miro", "Hotjar", "Google Analytics"],
-              // experience: [
-              //   "Improved user engagement by 40% through UX redesign projects",
-              //   "Conducted user research sessions with 100+ participants",
-              //   "Created interactive prototypes for 15+ web and mobile applications",
-              //   "Mentored junior UX designers in user-centered design principles"
-              // ],
-              // approach: [
-              //   "User research and persona development for informed decisions",
-              //   "Rapid prototyping and iterative testing for validation",
-              //   "Data-driven design improvements based on user analytics",
-              //   "Cross-functional collaboration with product and engineering teams"
-              // ]
             }}
           />
           <HoverExplanationCard 
@@ -84,18 +60,6 @@ const HomePage = () => (
                 "Hackathons",
                 "Accessibility Tools"
               ],
-              // experience: [
-              //   "Led digital literacy workshops for 200+ seniors",
-              //   "Developed accessible web solutions for 5 NGOs",
-              //   "Mentored 15+ junior developers in open source",
-              //   "Organized 3 successful community hackathons"
-              // ],
-              // approach: [
-              //   "Empowering communities through education and technology",
-              //   "Inclusive and accessible project development",
-              //   "Mentorship and knowledge sharing",
-              //   "Collaboration with NGOs and local organizations"
-              // ]
             }}
           />
         </div>
